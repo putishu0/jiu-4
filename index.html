@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酒</title>
+	<script src="js/js.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.poshytip.js"></script>
+    <script type='text/javascript' src='js/jq.validate.js'></script>
+    <script src="js/js.js"></script>
+    <script>
+        var pixelRatio = 1 / window.devicePixelRatio; //还原设备的真实分辨率；
+        //devicePixelRatio设备的像素比；
+        document.write('<meta name="viewport" content="width=device-width,initial-scale=' + pixelRatio + ',minimum-scale=' + pixelRatio + ',maximum-scale=' + pixelRatio + '" />');
+        var html = document.getElementsByTagName('html')[0];
+        var pageWidth = html.getBoundingClientRect().width;
+        html.style.fontSize = pageWidth / 10 + "px";
+    </script>
+</head>
+<body>
+	<header>
+		<img src="img/1.jpg" alt="">
+	</header>
+	<div class="free">
+		庆双节 抽大礼 美酒<span>免费送</span>
+	</div>
+	<form action="">
+    <ul>
+        <li>
+            <label for="phone1">姓 名<a>*</a></label>
+            <input type="text" placeholder="请填写您的真实姓名" name="t2" valType="CHINESE" msg="<font color=red>*</font>中文格式不正确"  id="phone1" autocomplete="off" />
+        </li>
+        <li>
+            <label for="code1">手机号码<a>*</a></label>
+            <input type="text" placeholder="请填写您的手机号码" name="t2" valType="MOBILE" msg="<font color=red>*</font>手机格式不正确" />
+        </li>
+        <li>
+			<label for="code1">数量<a>*</a></label>
+            <div class="num">
+               <span @click="ass" id="jian">-</span>
+                <span><input type="text" value="1" class="input1" disabled='disabled'></span>
+                <span @click="add" id="jia">+</span>
+               <span class="money"><input type="text" value="336" class="input2" disabled='disabled'></span>&nbsp;元
+            </div>
+        </li>
+        <li>
+            <label>地 址<a>*</a></label>
+            <input type="text" placeholder="请输入您的地址" name="t2" valType="DIZHI" msg="<font color=red>*</font>请输入正确的地址" />
+        </li>
+        <button class="submit">立即提交</button>
+        <!--<input type="submit" value="提交"  class="submit">-->
+    </ul>
+    </form>
+	<img src="https://ss0.bdstatic.com/9r-1bjml2gcT8tyhnq/nichang/laser/material//94ffe93becd3fe801a3611348918115f/a189e5/微信图片20180910110204.jpg@w_720,q_90" alt="" class="imgs">
+</body>
+</html>
